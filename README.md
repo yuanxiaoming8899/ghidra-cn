@@ -1,136 +1,119 @@
-<img src="Ghidra/Features/Base/src/main/resources/images/GHIDRA_3.png" width="400">
-
-# Ghidra Software Reverse Engineering Framework
-
-Ghidra is a software reverse engineering (SRE) framework created and maintained by the 
-[National Security Agency][nsa] Research Directorate. This framework includes a suite of 
-full-featured, high-end software analysis tools that enable users to analyze compiled code on a 
-variety of platforms including Windows, macOS, and Linux. Capabilities include disassembly, 
-assembly, decompilation, graphing, and scripting, along with hundreds of other features. Ghidra 
-supports a wide variety of processor instruction sets and executable formats and can be run in both 
-user-interactive and automated modes. Users may also develop their own Ghidra extension components 
-and/or scripts using Java or Python.
-
-In support of NSA's Cybersecurity mission, Ghidra was built to solve scaling and teaming problems 
-on complex SRE efforts, and to provide a customizable and extensible SRE research platform. NSA has 
-applied Ghidra SRE capabilities to a variety of problems that involve analyzing malicious code and 
-generating deep insights for SRE analysts who seek a better understanding of potential 
-vulnerabilities in networks and systems.
-
-If you are a U.S. citizen interested in projects like this, to develop Ghidra and other 
-cybersecurity tools for NSA to help protect our nation and its allies, consider applying for a 
-[career with us][career].
-
-## Security Warning
-
-**WARNING:** There are known security vulnerabilities within certain versions of Ghidra.  Before 
-proceeding, please read through Ghidra's [Security Advisories][security] for a better understanding 
-of how you might be impacted.
-
-## Install
-To install an official pre-built multi-platform Ghidra release:  
-* Install [JDK 17 64-bit][jdk17]
-* Download a Ghidra [release file][releases]
-  - **NOTE:** The official multi-platform release file is named 
-    `ghidra_<version>_<release>_<date>.zip` which can be found under the "Assets" drop-down.
-    Downloading either of the files named "Source Code" is not correct for this step.
-* Extract the Ghidra release file
-* Launch Ghidra: `./ghidraRun` (or `ghidraRun.bat` for Windows)
-
-For additional information and troubleshooting tips about installing and running a Ghidra release, 
-please refer to `docs/InstallationGuide.html` which can be found in your extracted Ghidra release 
-directory. 
-
-## Build
-
-To create the latest development build for your platform from this source repository:
-
-##### Install build tools:
-* [JDK 17 64-bit][jdk17]
-* [Gradle 7.3+][gradle]
-* make, gcc, and g++ (Linux/macOS-only)
-* [Microsoft Visual Studio][vs] 2017+ or [Microsoft C++ Build Tools][vcbuildtools] with the
-  following components installed (Windows-only):
-  - MSVC
-  - Windows SDK
-  - C++ ATL
-
-##### Download and extract the source:
-[Download from GitHub][master]
-```
-unzip ghidra-master
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/NationalSecurityAgency/ghidra/blob/master/Ghidra/Features/Base/src/main/resources/images/GHIDRA_3.png"><img src="/NationalSecurityAgency/ghidra/raw/master/Ghidra/Features/Base/src/main/resources/images/GHIDRA_3.png" width="400" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ghidra 软件逆向工程框架</font></font></h1><a id="user-content-ghidra-software-reverse-engineering-framework" class="anchor" aria-label="永久链接：Ghidra 软件逆向工程框架" href="#ghidra-software-reverse-engineering-framework"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://www.nsa.gov" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ghidra 是一个由国家安全局</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">研究局</font><font style="vertical-align: inherit;">创建和维护的软件逆向工程 (SRE) 框架
+。</font><font style="vertical-align: inherit;">该框架包括一套功能齐全的高端软件分析工具，使用户能够在包括 Windows、macOS 和 Linux 在内的各种平台上分析编译的代码。</font><font style="vertical-align: inherit;">功能包括反汇编、汇编、反编译、绘图和脚本编写，以及数百种其他功能。</font><font style="vertical-align: inherit;">Ghidra 支持多种处理器指令集和可执行格式，并且可以在用户交互和自动化模式下运行。</font><font style="vertical-align: inherit;">用户还可以使用 Java 或 Python 开发自己的 Ghidra 扩展组件和/或脚本。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了支持 NSA 的网络安全使命，Ghidra 旨在解决复杂 SRE 工作的扩展和团队问题，并提供可定制和可扩展的 SRE 研究平台。</font><font style="vertical-align: inherit;">NSA 已将 Ghidra SRE 功能应用于各种问题，包括分析恶意代码并为寻求更好地了解网络和系统中潜在漏洞的 SRE 分析师提供深入见解。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您是美国公民，对此类项目感兴趣，希望为 NSA 开发 Ghidra 和其他网络安全工具来帮助保护我们的国家及其盟友，请考虑向
+</font></font><a href="https://www.intelligencecareers.gov/nsa" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们申请职业机会</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全警告</font></font></h2><a id="user-content-security-warning" class="anchor" aria-label="永久链接：安全警告" href="#security-warning"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">警告：</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">某些版本的 Ghidra 中存在已知的安全漏洞。</font><font style="vertical-align: inherit;">在继续之前，请阅读 Ghidra 的</font></font><a href="https://github.com/NationalSecurityAgency/ghidra/security/advisories"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全公告</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，以更好地了解您可能会受到的影响。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h2><a id="user-content-install" class="anchor" aria-label="永久链接：安装" href="#install"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要安装官方预构建的多平台 Ghidra 版本：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font><a href="https://adoptium.net/temurin/releases" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JDK 17 64 位</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载 Ghidra</font></font><a href="https://github.com/NationalSecurityAgency/ghidra/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发行文件</font></font></a>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方多平台发布文件的名称
+</font></font><code>ghidra_&lt;version&gt;_&lt;release&gt;_&lt;date&gt;.zip</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以在“资产”下拉列表中找到。</font><font style="vertical-align: inherit;">下载名为“源代码”的文件对于此步骤来说是不正确的。</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提取 Ghidra 发布文件</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">启动 Ghidra：（</font></font><code>./ghidraRun</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或</font></font><code>ghidraRun.bat</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于 Windows）</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关安装和运行 Ghidra 版本的其他信息和故障排除提示，请参阅</font></font><code>docs/InstallationGuide.html</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可在提取的 Ghidra 版本目录中找到的内容。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建造</font></font></h2><a id="user-content-build" class="anchor" aria-label="永久链接：构建" href="#build"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要从此源存储库为您的平台创建最新的开发版本：</font></font></p>
+<div class="markdown-heading" dir="auto"><h5 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装构建工具：</font></font></h5><a id="user-content-install-build-tools" class="anchor" aria-label="永久链接：安装构建工具：" href="#install-build-tools"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://adoptium.net/temurin/releases" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JDK 17 64 位</font></font></a></li>
+<li><a href="https://gradle.org/releases/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">摇篮 7.3+</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">make、gcc 和 g++（仅限 Linux/macOS）</font></font></li>
+<li><a href="https://visualstudio.microsoft.com/vs/community/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装了以下组件的
+</font><a href="https://visualstudio.microsoft.com/vs/community/" rel="nofollow"><font style="vertical-align: inherit;">Microsoft Visual Studio</font></a><font style="vertical-align: inherit;"> 2017+ 或</font></font><a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Microsoft C++ 构建工具（仅限 Windows）：</font></font></a><font style="vertical-align: inherit;"></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MSVC</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">视窗软件开发工具包</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C++ ATL</font></font></li>
+</ul>
+</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h5 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载并解压源码：</font></font></h5><a id="user-content-download-and-extract-the-source" class="anchor" aria-label="永久链接：下载并解压源代码：" href="#download-and-extract-the-source"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://github.com/NationalSecurityAgency/ghidra/archive/refs/heads/master.zip"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从 GitHub 下载</font></font></a></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>unzip ghidra-master
 cd ghidra-master
-```
-**NOTE:** Instead of downloading the compressed source, you may instead want to clone the GitHub 
-repository: `git clone https://github.com/NationalSecurityAgency/ghidra.git`
-
-##### Download additional build dependencies into source repository: 
-```
-gradle -I gradle/support/fetchDependencies.gradle init
-```
-
-##### Create development build: 
-```
-gradle buildGhidra
-```
-The compressed development build will be located at `build/dist/`.
-
-For more detailed information on building Ghidra, please read the [Developer Guide][devguide].
-
-For issues building, please check the [Known Issues][known-issues] section for possible solutions.
-
-## Develop
-
-### User Scripts and Extensions
-Ghidra installations support users writing custom scripts and extensions via the *GhidraDev* plugin 
-for Eclipse.  The plugin and its corresponding instructions can be found within a Ghidra release at
-`Extensions/Eclipse/GhidraDev/` or at [this link][ghidradev].
-
-**NOTE:** The *GhidraDev* plugin for Eclipse only supports developing against fully built
-Ghidra installations which can be downloaded from the [Releases][releases] page.
-
-### Advanced Development
-To develop the Ghidra tool itself, it is highly recommended to use Eclipse, which the Ghidra 
-development process has been highly customized for.
-
-##### Install build and development tools:
-* Follow the above [build instructions](#build) so the build completes without errors
-* Install [Eclipse IDE for Java Developers][eclipse]
-
-##### Prepare the development environment:
-``` 
-gradle prepdev eclipse buildNatives
-```
-
-##### Import Ghidra projects into Eclipse:
-* *File* -> *Import...*
-* *General* | *Existing Projects into Workspace*
-* Select root directory to be your downloaded or cloned ghidra source repository
-* Check *Search for nested projects*
-* Click *Finish*
-
-When Eclipse finishes building the projects, Ghidra can be launched and debugged with the provided
-**Ghidra** Eclipse *run configuration*.
-
-For more detailed information on developing Ghidra, please read the [Developer Guide][devguide]. 
-
-## Contribute
-If you would like to contribute bug fixes, improvements, and new features back to Ghidra, please 
-take a look at our [Contributor Guide][contrib] to see how you can participate in this open 
-source project.
-
-
-[nsa]: https://www.nsa.gov
-[contrib]: CONTRIBUTING.md
-[devguide]: DevGuide.md
-[known-issues]: DevGuide.md#known-issues
-[career]: https://www.intelligencecareers.gov/nsa
-[releases]: https://github.com/NationalSecurityAgency/ghidra/releases
-[jdk17]: https://adoptium.net/temurin/releases
-[gradle]: https://gradle.org/releases/
-[vs]: https://visualstudio.microsoft.com/vs/community/
-[vcbuildtools]: https://visualstudio.microsoft.com/visual-cpp-build-tools/
-[eclipse]: https://www.eclipse.org/downloads/packages/
-[master]: https://github.com/NationalSecurityAgency/ghidra/archive/refs/heads/master.zip
-[security]: https://github.com/NationalSecurityAgency/ghidra/security/advisories
-[ghidradev]: https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/master/GhidraBuild/EclipsePlugins/GhidraDev/GhidraDevPlugin/GhidraDev_README.html
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="unzip ghidra-master
+cd ghidra-master" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可能不想下载压缩源，而是克隆 GitHub 存储库：</font></font><code>git clone https://github.com/NationalSecurityAgency/ghidra.git</code></p>
+<div class="markdown-heading" dir="auto"><h5 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">将额外的构建依赖项下载到源存储库中：</font></font></h5><a id="user-content-download-additional-build-dependencies-into-source-repository" class="anchor" aria-label="永久链接：将其他构建依赖项下载到源存储库中：" href="#download-additional-build-dependencies-into-source-repository"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>gradle -I gradle/support/fetchDependencies.gradle init
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="gradle -I gradle/support/fetchDependencies.gradle init" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<div class="markdown-heading" dir="auto"><h5 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">创建开发版本：</font></font></h5><a id="user-content-create-development-build" class="anchor" aria-label="永久链接：创建开发版本：" href="#create-development-build"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>gradle buildGhidra
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="gradle buildGhidra" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">压缩的开发版本将位于</font></font><code>build/dist/</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关构建 Ghidra 的更多详细信息，请阅读</font></font><a href="/NationalSecurityAgency/ghidra/blob/master/DevGuide.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于构建问题，请查看</font></font><a href="/NationalSecurityAgency/ghidra/blob/master/DevGuide.md#known-issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“已知问题”</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">部分以获取可能的解决方案。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发展</font></font></h2><a id="user-content-develop" class="anchor" aria-label="永久链接： 开发" href="#develop"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户脚本和扩展</font></font></h3><a id="user-content-user-scripts-and-extensions" class="anchor" aria-label="永久链接：用户脚本和扩展" href="#user-scripts-and-extensions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ghidra 安装支持用户通过Eclipse 的</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GhidraDev</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">插件编写自定义脚本和扩展。</font></font><code>Extensions/Eclipse/GhidraDev/</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该插件及其相应的说明可以在 Ghidra 版本中或在</font></font><a href="https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/master/GhidraBuild/EclipsePlugins/GhidraDev/GhidraDevPlugin/GhidraDev_README.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此链接</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中找到
+</font><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意： Eclipse 的</font></font></strong><font style="vertical-align: inherit;"></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GhidraDev</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">插件仅支持针对完全构建的 Ghidra 安装进行开发，可以从</font></font><a href="https://github.com/NationalSecurityAgency/ghidra/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发布</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">页面下载该安装</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高级开发</font></font></h3><a id="user-content-advanced-development" class="anchor" aria-label="永久链接：高级开发" href="#advanced-development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要开发 Ghidra 工具本身，强烈建议使用 Eclipse，Ghidra 开发流程已针对 Eclipse 进行了高度定制。</font></font></p>
+<div class="markdown-heading" dir="auto"><h5 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装构建和开发工具：</font></font></h5><a id="user-content-install-build-and-development-tools" class="anchor" aria-label="永久链接：安装构建和开发工具：" href="#install-build-and-development-tools"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按照上面的</font></font><a href="#build"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建说明</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进行操作，以便构建完成而不会出现错误</font></font></li>
+<li><font style="vertical-align: inherit;"><a href="https://www.eclipse.org/downloads/packages/" rel="nofollow"><font style="vertical-align: inherit;">为 Java 开发人员</font></a><font style="vertical-align: inherit;">安装Eclipse IDE</font></font><a href="https://www.eclipse.org/downloads/packages/" rel="nofollow"><font style="vertical-align: inherit;"></font></a></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h5 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">准备开发环境：</font></font></h5><a id="user-content-prepare-the-development-environment" class="anchor" aria-label="永久链接：准备开发环境：" href="#prepare-the-development-environment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>gradle prepdev eclipse buildNatives
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="gradle prepdev eclipse buildNatives" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<div class="markdown-heading" dir="auto"><h5 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">将 Ghidra 项目导入 Eclipse：</font></font></h5><a id="user-content-import-ghidra-projects-into-eclipse" class="anchor" aria-label="永久链接：将 Ghidra 项目导入 Eclipse：" href="#import-ghidra-projects-into-eclipse"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-&gt;</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">导入...</font></font></em></li>
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一般</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">| </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">将现有项目放入工作区</font></font></em></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">选择根目录作为您下载或克隆的 ghidra 源存储库</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">检查</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索嵌套项目</font></font></em></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">单击</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“完成”</font></font></em></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">当 Eclipse 完成项目构建后，可以使用提供的
+</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ghidra</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Eclipse</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行配置</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">启动和调试 Ghidra 。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关开发 Ghidra 的更多详细信息，请阅读</font></font><a href="/NationalSecurityAgency/ghidra/blob/master/DevGuide.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2><a id="user-content-contribute" class="anchor" aria-label="永久链接：贡献" href="#contribute"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想向 Ghidra 贡献错误修复、改进和新功能，请查看我们的</font></font><a href="/NationalSecurityAgency/ghidra/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献者指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，了解如何参与这个开源项目。</font></font></p>
+</article></div>
